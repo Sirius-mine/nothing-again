@@ -8,8 +8,8 @@
   <meta name="theme-color" content="#f2eadc">
   <meta name="color-scheme" content="light">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%239a3b2c'/%3E%3Cpath d='M18 35c0-8 10-14 20-14 14 0 22 8 22 18 0 11-9 17-22 17-12 0-20-6-20-14 0-3 1-6 3-8' fill='%23f6eddc'/%3E%3Cpath d='M41 26c6 7 5 19-3 25' stroke='%239a3b2c' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
-  <script type="module" crossorigin src="./assets/index-DhFGUJPV.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CND94iDg.css">
+  <script type="module" crossorigin src="./assets/index-BCvpAGoV.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-nDj115N2.css">
 </head>
 <body>
   <div class="page-frame" aria-hidden="true"></div>
@@ -18,15 +18,26 @@
 
   <div class="site">
     <header class="topbar">
-      <div class="brand" aria-label="无事木鱼">
-        <span class="brand-seal" aria-hidden="true">無</span>
-        <div class="brand-lockup">
-          <h1 class="brand-name">无事</h1>
-          <p class="brand-sub">MU YU</p>
+      <div class="brand-cluster">
+        <div class="brand" aria-label="无事木鱼">
+          <span class="brand-seal" aria-hidden="true">無</span>
+          <div class="brand-lockup">
+            <h1 class="brand-name">无事</h1>
+            <p class="brand-sub">MU YU</p>
+          </div>
         </div>
+        <p class="site-total">
+          <span>自创站以来</span>
+          <strong id="globalTotal">—</strong>
+          <span>次没事</span>
+        </p>
       </div>
 
       <div class="header-actions">
+      <button class="board-toggle" id="leaderboardButton" type="button" aria-haspopup="dialog" aria-controls="leaderboardDialog">
+        <span class="board-mark" aria-hidden="true">榜</span>
+        <span class="board-text">没事榜</span>
+      </button>
       <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="true" aria-label="关闭声音" title="关闭声音">
         <svg class="sound-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path d="M4 9.4h3.1L12 5.3v13.4l-4.9-4.1H4z" fill="currentColor" opacity=".82"/>
@@ -251,6 +262,14 @@
     <p id="syncMessage" class="account-message" role="status"></p>
     <button type="button" id="retrySync" class="account-switch" hidden>重新同步</button>
     <button type="button" id="logoutButton" class="account-secondary">退出登录</button>
+  </dialog>
+  <dialog id="leaderboardDialog" class="account-dialog board-dialog" aria-labelledby="boardTitle">
+    <button type="button" class="dialog-close" data-close aria-label="关闭">×</button>
+    <p class="account-eyebrow">无事 · 众生</p>
+    <h2 id="boardTitle">没事榜</h2>
+    <p class="account-note">按累计敲击次数排名 · 显示前 10 名</p>
+    <ol id="leaderboardList" class="leaderboard-list"></ol>
+    <p id="boardMessage" class="account-message" role="status"></p>
   </dialog>
   <p id="accountNotice" class="account-notice" role="status" hidden></p>
 </body>
