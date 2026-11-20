@@ -8,8 +8,8 @@
   <meta name="theme-color" content="#f2eadc">
   <meta name="color-scheme" content="light">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%239a3b2c'/%3E%3Cpath d='M18 35c0-8 10-14 20-14 14 0 22 8 22 18 0 11-9 17-22 17-12 0-20-6-20-14 0-3 1-6 3-8' fill='%23f6eddc'/%3E%3Cpath d='M41 26c6 7 5 19-3 25' stroke='%239a3b2c' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
-  <script type="module" crossorigin src="./assets/index-DKc1kRMr.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BTwBW2c2.css">
+  <script type="module" crossorigin src="./assets/index-DoM9xYro.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Cn9EkgIh.css">
 </head>
 <body>
   <div class="page-frame" aria-hidden="true"></div>
@@ -287,6 +287,18 @@
     <p class="account-note">注册用户累计排行 · 显示前 10 名</p>
     <ol id="leaderboardList" class="leaderboard-list"></ol>
     <p id="boardMessage" class="account-message" role="status"></p>
+  </dialog>
+  <dialog id="banDialog" class="account-dialog ban-dialog" aria-labelledby="banTitle">
+    <button type="button" class="dialog-close" data-close aria-label="关闭">×</button>
+    <p class="account-eyebrow">无事 · 暂别</p>
+    <h2 id="banTitle">账号已被封禁</h2>
+    <p id="banMessage" class="account-note">该账号已被封禁，本机已退出登录。封禁期间无法登录，也无法记录敲击。</p>
+    <div class="ban-countdown">
+      <span>剩余封禁时间</span>
+      <strong id="banRemaining">—</strong>
+      <span id="banUntil"></span>
+    </div>
+    <button type="button" class="account-secondary" data-close>知道了</button>
   </dialog>
   <p id="accountNotice" class="account-notice" role="status" hidden></p>
 </body>
